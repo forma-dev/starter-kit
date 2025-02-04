@@ -5,7 +5,7 @@ import { MyERC721ABI } from '@/abi/MyERC721.abi';
 
 // Types for NFT metadata
 type Attribute = {
-  traitType: string;
+  trait_type: string;
   value: string;
 };
 
@@ -38,7 +38,7 @@ const Mint: NextPage = () => {
 
   const [newTag, setNewTag] = useState('');
   const [newAttribute, setNewAttribute] = useState<Attribute>({
-    traitType: '',
+    trait_type: '',
     value: '',
   });
 
@@ -60,12 +60,12 @@ const Mint: NextPage = () => {
   };
 
   const addAttribute = () => {
-    if (newAttribute.traitType && newAttribute.value) {
+    if (newAttribute.trait_type && newAttribute.value) {
       setMetadata(prev => ({
         ...prev,
         attributes: [...prev.attributes, { ...newAttribute }],
       }));
-      setNewAttribute({ traitType: '', value: '' });
+      setNewAttribute({ trait_type: '', value: '' });
     }
   };
 
@@ -228,8 +228,8 @@ const Mint: NextPage = () => {
             <input 
               type="text"
               placeholder="Trait Type"
-              value={newAttribute.traitType}
-              onChange={(e) => setNewAttribute(prev => ({ ...prev, traitType: e.target.value }))}
+              value={newAttribute.trait_type}
+              onChange={(e) => setNewAttribute(prev => ({ ...prev, trait_type: e.target.value }))}
               className="flex-1 px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
             <input 
@@ -254,7 +254,7 @@ const Mint: NextPage = () => {
                 className="flex items-center justify-between bg-gray-50 p-3 rounded-lg border border-gray-200 hover:border-gray-300 transition-colors"
               >
                 <div className="flex flex-col">
-                  <span className="text-sm text-gray-500">{attr.traitType}</span>
+                  <span className="text-sm text-gray-500">{attr.trait_type}</span>
                   <span className="font-medium">{attr.value}</span>
                 </div>
                 <button

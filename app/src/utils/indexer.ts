@@ -1,7 +1,7 @@
 import { config } from '@/config';
 
 export interface Attribute {
-  traitType: string;
+  trait_type: string;
   value: string;
 }
 

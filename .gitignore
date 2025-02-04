@@ -1,0 +1,6 @@
+/artifacts
+/cache
+/broadcast
+/node_modules
+.env
+.env.local

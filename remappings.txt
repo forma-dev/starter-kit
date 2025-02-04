@@ -1,0 +1,2 @@
+@forma-dev/=node_modules/@forma-dev/
+@openzeppelin/=node_modules/@openzeppelin/

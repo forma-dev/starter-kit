@@ -73,10 +73,10 @@ export const myErc721Config = {
 };
 ```
 
-### 4. Build the Contract
+### 4. Compile the Contract
 
 ```bash
-pnpm contracts:build
+pnpm contracts:compile
 ```
 
 ### 5. Deploy the Contract

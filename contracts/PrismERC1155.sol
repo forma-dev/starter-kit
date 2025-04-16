@@ -45,6 +45,7 @@ contract PrismERC1155 is Ownable2Step, ContractMetadata, ERC1155Cementable {
     function mint(address _to, uint256 _tokenId, uint256 _amount) public onlyMinter(_tokenId) {
         require(_exists(_tokenId), "Invalid tokenId");
         require(balanceOf(_to, _tokenId) == 0, "Address has already minted this token");
+        require(_amount == 1, "Invalid amount");
         _mint(_to, _tokenId, _amount, "");
     }
 
